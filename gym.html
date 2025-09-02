@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRD Health & Fitness - Sculpt Your Strength</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212; /* Dark background for a modern feel */
+            color: #E0E0E0; /* Light gray text for readability */
+        }
+        .hero-bg {
+            /* New, high-quality hero image */
+            background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=2071&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .accent-color {
+            color: #FACC15; /* A vibrant yellow for energy */
+        }
+        .bg-accent {
+            background-color: #FACC15;
+        }
+        .border-accent {
+            border-color: #FACC15;
+        }
+        .btn-primary {
+            @apply bg-accent text-gray-900 font-bold py-3 px-8 rounded-lg uppercase tracking-wider transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/20;
+        }
+        .btn-secondary {
+            @apply bg-transparent border-2 border-accent text-accent font-bold py-3 px-8 rounded-lg uppercase tracking-wider transition-all duration-300 ease-in-out hover:bg-accent hover:text-gray-900;
+        }
+        .section-title {
+            @apply text-4xl md:text-5xl font-black uppercase tracking-wider;
+        }
+        .section-subtitle {
+            @apply text-lg text-gray-400 max-w-2xl mx-auto;
+        }
+        /* Enhanced hero text for readability */
+        .hero-text-shadow {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        /* Animation classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header -->
+    <header id="header" class="bg-black bg-opacity-50 backdrop-blur-sm p-4 fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-black tracking-widest">WRD<span class="accent-color">.</span>FIT</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#why-us" class="hover:text-yellow-400 transition-colors">Why Us</a>
+                <a href="#programs" class="hover:text-yellow-400 transition-colors">Programs</a>
+                <a href="#testimonials" class="hover:text-yellow-400 transition-colors">Testimonials</a>
+                <a href="#pricing" class="hover:text-yellow-400 transition-colors">Pricing</a>
+                <a href="#contact" class="hover:text-yellow-400 transition-colors">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-2xl z-50">
+                <svg id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <svg id="menu-close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-8 text-2xl transform -translate-x-full transition-transform duration-300 ease-in-out">
+        <a href="#why-us" class="mobile-link">Why Us</a>
+        <a href="#programs" class="mobile-link">Programs</a>
+        <a href="#testimonials" class="mobile-link">Testimonials</a>
+        <a href="#pricing" class="mobile-link">Pricing</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="container mx-auto text-center px-4">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase hero-text-shadow reveal">
+                Sculpt Your <span class="accent-color">Strength</span>
+            </h1>
+            <p class="text-xl md:text-2xl mt-4 max-w-3xl mx-auto text-gray-300 hero-text-shadow reveal" style="transition-delay: 100ms;">
+                WRD Health & Fitness is not just a gym. It's a community dedicated to helping you achieve your ultimate potential.
+            </p>
+            <div class="mt-10 space-y-4 sm:space-y-0 sm:space-x-4 reveal" style="transition-delay: 200ms;">
+                <a href="#pricing" class="btn-primary inline-block">Join The Movement</a>
+                <a href="#programs" class="btn-secondary inline-block">Explore Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="section-title reveal">Why <span class="accent-color">WRD</span>?</h2>
+            <p class="section-subtitle mt-4 reveal" style="transition-delay: 100ms;">We provide more than just equipment. We provide a path to a better you.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-16">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 bg-opacity-40 p-8 rounded-xl transition-all duration-300 hover:bg-opacity-60 hover:scale-105 reveal" style="transition-delay: 200ms;">
+                    <div class="text-5xl accent-color mb-4">🏋️</div>
+                    <h3 class="text-2xl font-bold mb-2">Elite Equipment</h3>
+                    <p class="text-gray-400">Top-of-the-line gear for every workout style, ensuring you have the best tools to succeed.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-gray-800 bg-opacity-40 p-8 rounded-xl transition-all duration-300 hover:bg-opacity-60 hover:scale-105 reveal" style="transition-delay: 300ms;">
+                    <div class="text-5xl accent-color mb-4">🧑‍🏫</div>
+                    <h3 class="text-2xl font-bold mb-2">Expert Trainers</h3>
+                    <p class="text-gray-400">Certified professionals dedicated to crafting your perfect fitness journey and pushing your limits.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-gray-800 bg-opacity-40 p-8 rounded-xl transition-all duration-300 hover:bg-opacity-60 hover:scale-105 reveal" style="transition-delay: 400ms;">
+                    <div class="text-5xl accent-color mb-4">⏰</div>
+                    <h3 class="text-2xl font-bold mb-2">24/7 Access</h3>
+                    <p class="text-gray-400">Your fitness goals don't wait, and neither do we. Train whenever inspiration strikes.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-gray-800 bg-opacity-40 p-8 rounded-xl transition-all duration-300 hover:bg-opacity-60 hover:scale-105 reveal" style="transition-delay: 500ms;">
+                    <div class="text-5xl accent-color mb-4">🤝</div>
+                    <h3 class="text-2xl font-bold mb-2">Vibrant Community</h3>
+                    <p class="text-gray-400">Join a supportive family of members who motivate and celebrate every achievement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 md:py-32 bg-black bg-opacity-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="section-title reveal">Our Programs</h2>
+            <p class="section-subtitle mt-4 reveal" style="transition-delay: 100ms;">Find the perfect fit for your goals. From high-intensity to mindful movement.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+                <!-- Program Card 1: Strength -->
+                <div class="group relative rounded-lg overflow-hidden shadow-lg reveal" style="transition-delay: 200ms;">
+                    <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=2069&auto=format&fit=crop" alt="Strength Training" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute inset-0 flex items-end p-6">
+                        <h3 class="text-white text-3xl font-bold">Strength Training</h3>
+                    </div>
+                </div>
+                <!-- Program Card 2: Cardio -->
+                <div class="group relative rounded-lg overflow-hidden shadow-lg reveal" style="transition-delay: 300ms;">
+                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1975&auto=format&fit=crop" alt="Cardio Blast" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute inset-0 flex items-end p-6">
+                        <h3 class="text-white text-3xl font-bold">Cardio Blast</h3>
+                    </div>
+                </div>
+                <!-- Program Card 3: Yoga -->
+                <div class="group relative rounded-lg overflow-hidden shadow-lg reveal" style="transition-delay: 400ms;">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2120&auto=format&fit=crop" alt="Yoga & Flexibility" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute inset-0 flex items-end p-6">
+                        <h3 class="text-white text-3xl font-bold">Yoga & Flexibility</h3>
+                    </div>
+                </div>
+                <!-- Program Card 4: HIIT -->
+                <div class="group relative rounded-lg overflow-hidden shadow-lg reveal" style="transition-delay: 500ms;">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d257692634c2?q=80&w=2070&auto=format&fit=crop" alt="HIIT Zone" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute inset-0 flex items-end p-6">
+                        <h3 class="text-white text-3xl font-bold">HIIT Zone</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="section-title reveal">What Our Members Say</h2>
+            <p class="section-subtitle mt-4 reveal" style="transition-delay: 100ms;">Real stories from the people who make our community great.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-800 bg-opacity-40 p-8 rounded-xl text-left reveal" style="transition-delay: 200ms;">
+                    <p class="text-gray-300">"Joining WRD was the best decision I've made for my health. The trainers are incredibly supportive and the atmosphere is pure motivation. I've surpassed goals I never thought possible!"</p>
+                    <div class="flex items-center mt-6">
+                        <img src="https://placehold.co/50x50/FACC15/121212?text=A" class="rounded-full" alt="Member photo">
+                        <div class="ml-4">
+                            <p class="font-bold">Aarav Patel</p>
+                            <p class="text-sm text-gray-400">Pro Member</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-800 bg-opacity-40 p-8 rounded-xl text-left reveal" style="transition-delay: 300ms;">
+                    <p class="text-gray-300">"The 24/7 access is a game-changer for my busy schedule. The equipment is top-notch and the community feels like a second family. Highly recommend WRD to anyone serious about fitness."</p>
+                    <div class="flex items-center mt-6">
+                        <img src="https://placehold.co/50x50/FACC15/121212?text=P" class="rounded-full" alt="Member photo">
+                        <div class="ml-4">
+                            <p class="font-bold">Priya Sharma</p>
+                            <p class="text-sm text-gray-400">Elite Member</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-800 bg-opacity-40 p-8 rounded-xl text-left reveal" style="transition-delay: 400ms;">
+                    <p class="text-gray-300">"From the HIIT classes to the yoga sessions, there's always something to challenge me. WRD isn't just a gym; it's a complete wellness center that has truly transformed my lifestyle."</p>
+                    <div class="flex items-center mt-6">
+                        <img src="https://placehold.co/50x50/FACC15/121212?text=R" class="rounded-full" alt="Member photo">
+                        <div class="ml-4">
+                            <p class="font-bold">Rohan Kumar</p>
+                            <p class="text-sm text-gray-400">Starter Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 md:py-32 bg-black bg-opacity-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="section-title reveal">Membership Plans</h2>
+            <p class="section-subtitle mt-4 reveal" style="transition-delay: 100ms;">Choose the plan that powers your ambition. No hidden fees, just results.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mt-16 items-center">
+                <!-- Plan 1: Starter -->
+                <div class="bg-gray-800 bg-opacity-40 p-8 rounded-xl border-2 border-transparent transition-transform duration-300 hover:scale-105 reveal" style="transition-delay: 200ms;">
+                    <h3 class="text-2xl font-bold uppercase">Starter</h3>
+                    <p class="text-5xl font-black my-4">₹1,499<span class="text-lg font-medium text-gray-400">/mo</span></p>
+                    <ul class="text-left space-y-3 my-8">
+                        <li>✅ Full Gym Access</li>
+                        <li>✅ Standard Classes</li>
+                        <li class="text-gray-500">❌ Personal Training</li>
+                        <li class="text-gray-500">❌ Nutrition Plan</li>
+                    </ul>
+                    <a href="#" class="btn-secondary w-full block text-center">Get Started</a>
+                </div>
+                <!-- Plan 2: Pro (Featured) -->
+                <div class="bg-gray-800 bg-opacity-60 p-8 rounded-xl border-2 border-accent shadow-2xl shadow-yellow-500/20 transform scale-105 reveal" style="transition-delay: 300ms;">
+                    <p class="bg-accent text-gray-900 font-bold py-1 px-4 rounded-full inline-block mb-4">MOST POPULAR</p>
+                    <h3 class="text-3xl font-bold uppercase">Pro</h3>
+                    <p class="text-6xl font-black my-4">₹2,499<span class="text-lg font-medium text-gray-400">/mo</span></p>
+                    <ul class="text-left space-y-3 my-8">
+                        <li>✅ Full Gym Access</li>
+                        <li>✅ All Classes Included</li>
+                        <li>✅ 4x Personal Training/mo</li>
+                        <li class="text-gray-500">❌ Custom Nutrition Plan</li>
+                    </ul>
+                    <a href="#" class="btn-primary w-full block text-center">Choose Pro</a>
+                </div>
+                <!-- Plan 3: Elite -->
+                <div class="bg-gray-800 bg-opacity-40 p-8 rounded-xl border-2 border-transparent transition-transform duration-300 hover:scale-105 reveal" style="transition-delay: 400ms;">
+                    <h3 class="text-2xl font-bold uppercase">Elite</h3>
+                    <p class="text-5xl font-black my-4">₹4,999<span class="text-lg font-medium text-gray-400">/mo</span></p>
+                    <ul class="text-left space-y-3 my-8">
+                        <li>✅ Full Gym Access</li>
+                        <li>✅ All Classes Included</li>
+                        <li>✅ Unlimited Personal Training</li>
+                        <li>✅ Custom Nutrition Plan</li>
+                    </ul>
+                    <a href="#" class="btn-secondary w-full block text-center">Go Elite</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black bg-opacity-40 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold reveal">Ready to Transform?</h2>
+            <p class="text-gray-400 mt-2 max-w-xl mx-auto reveal" style="transition-delay: 100ms;">Your journey starts with a single step. Join the WRD family today.</p>
+            <div class="mt-8 reveal" style="transition-delay: 200ms;">
+                <a href="#pricing" class="btn-primary">Become a Member</a>
+            </div>
+            <div class="mt-16 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500">
+                <p>&copy; 2024 WRD Health & Fitness. All Rights Reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-yellow-400">Facebook</a>
+                    <a href="#" class="hover:text-yellow-400">Instagram</a>
+                    <a href="#" class="hover:text-yellow-400">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- Header Scroll Effect ---
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('bg-black', 'shadow-lg');
+                } else {
+                    header.classList.remove('bg-black', 'shadow-lg');
+                }
+            });
+
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOpenIcon = document.getElementById('menu-open-icon');
+            const menuCloseIcon = document.getElementById('menu-close-icon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                mobileMenu.classList.toggle('-translate-x-full');
+                menuOpenIcon.classList.toggle('hidden');
+                menuCloseIcon.classList.toggle('hidden');
+                document.body.classList.toggle('overflow-hidden');
+            }
+
+            mobileMenuButton.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+
+            // --- Scroll Reveal Animation ---
+            const revealElements = document.querySelectorAll('.reveal');
+            
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            });
+
+            revealElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
+
